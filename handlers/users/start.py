@@ -17,3 +17,6 @@ async def test(message:types.Message):
     except wikipedia.exceptions.PageError:
         result ="Malumot topilmadi!"
     await message.answer(result)
+@dp.message_handler(commands='behzod')
+async def test(message:types.Message):
+    await message.answer("Behzod buyrugini berdiz!")
